@@ -18,28 +18,38 @@
   export default {
     data(){
       return {
-        projectexperience:[],
+        projectexperience:[{"projectname":"联想官网台湾地区教育商店","projectimage":"TW_EDU.jpg","projecturl":"//www3.lenovo.com/tw/zh/twedu/gatekeeper/showpage?toggle=RegistrationGatekeeper"},{"projectname":"联想印度尼西亚产品促销页面","projectimage":"ID_Campaign.jpg","projecturl":"//cap.lenovo.com/id/in/thinkpad/"},{"projectname":"新加坡Jedi Challenges发布页面","projectimage":"SG_JEDI.jpg","projecturl":"//www3.lenovo.com/sg/en/jedichallenges/"},{"projectname":"台湾Thinkpad产品促销页面","projectimage":"TW_ThinkPad.jpg","projecturl":"//www3.lenovo.com/tw/zh/deals/special-offers/thinkpad-is-the-new-black/"}],
         projectgallery:[],
         projecturls:[]
       }
     },
     created () {
-      this.$http.get('/api/projectexperience.json').then(function(res){
-        if (!this.projectgallery) this.projectgallery = []
-        if (!this.projecturls) this.projecturls = []
-        var data = res.data
-        console.log(res.data)
-        this.$set(this, 'projectexperience', data)
-        for (let i = 0; i < this.projectexperience.length; i++) {
-          if (this.projectexperience[i].Access != 0) {
-            this.projectgallery.push({backgroundImage: 'url(' + require('../assets/images/'+this.projectexperience[i].projectimage) + ')'})
-            this.projecturls.push(this.projectexperience[i].projecturl)
-          }
+      if (!this.projectgallery) this.projectgallery = []
+      if (!this.projecturls) this.projecturls = []
+      for (let i = 0; i < this.projectexperience.length; i++) {
+        if (this.projectexperience[i].Access != 0) {
+          this.projectgallery.push({backgroundImage: 'url(' + require('../assets/images/'+this.projectexperience[i].projectimage) + ')'})
+          this.projecturls.push(this.projectexperience[i].projecturl)
         }
-      },function(){
-        //alert('请求失败处理');   //失败处理
-      });
+      }
     }
+//    created () {
+//      this.$http.get('/api/projectexperience.json').then(function(res){
+//        if (!this.projectgallery) this.projectgallery = []
+//        if (!this.projecturls) this.projecturls = []
+//        var data = res.data
+//        console.log(res.data)
+//        this.$set(this, 'projectexperience', data)
+//        for (let i = 0; i < this.projectexperience.length; i++) {
+//          if (this.projectexperience[i].Access != 0) {
+//            this.projectgallery.push({backgroundImage: 'url(' + require('../assets/images/'+this.projectexperience[i].projectimage) + ')'})
+//            this.projecturls.push(this.projectexperience[i].projecturl)
+//          }
+//        }
+//      },function(){
+//        //alert('请求失败处理');   //失败处理
+//      });
+//    }
   }
 </script>
 

@@ -22,18 +22,18 @@
     name: 'App',
     data(){
         return{
-          navigation:[]
+          navigation:[{"name":"个人简介","router":"AboutMe"},{"name":"教育背景","router":"Education"},{"name":"工作经验","router":"WorkExperience"},{"name":"项目经验","router":"ProjectExperience"},{"name":"掌握技能","router":"Skills"}]
         }
     },
-    created () {
-      this.$http.get('/api/navigation.json').then(function(res){
-        var data = res.data
-        console.log(res.data)
-        this.$set(this, 'navigation', res.body)
-      },function(){
-        //alert('请求失败处理');   //失败处理
-      });
-    }
+//    created () {
+//      this.$http.get('/api/navigation.json').then(function(res){
+//        var data = res.data
+//        console.log(res.data)
+//        this.$set(this, 'navigation', res.body)
+//      },function(){
+//        //alert('请求失败处理');   //失败处理
+//      });
+//    }
   }
 </script>
 

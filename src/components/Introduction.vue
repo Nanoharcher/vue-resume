@@ -21,18 +21,18 @@
   export default {
     data(){
         return{
-            introduction:[]
+            introduction:{"name":"马旭骁","birthday":"1993年3月8日","telephone":"+86 13520496130","email":"2474451540@qq.com","college":"瑞典皇家理工学院","education":"硕士","summary":"本人于2011年高中毕业，随后到瑞典留学。本科三年就读于克里斯提安斯塔德学院，专业为计算机科学与软件开发。研究生两年就读于瑞典皇家理工学院，专业为媒体技术。 有着扎实的编程基础以及对媒体产业的深刻理解和创新思维。熟悉多平台的网络开发，用户体验以及人机交互的设计和开发，数据通信，图像声音以及视频的处理，数据库等相关技术。为人积极向上，热情， 且充满活力。对不了解的知识有着谦逊的学习态度，且有着超强的学习能力。有着很好的团队精神，跟所有同事的关系都超级好。 渴望在一个乐观向上的的环境里工作，同时提高自己的能力。回到国内后，由于对前端开发的热爱以及对其职业前景的期待，选择就职于联想集团，职位为前端开发工程师。主要工作内容为亚太地区联想官方网站的开发，维护，以及测试。官网面向多个地区，如香港、台湾、韩国、新加坡、马来西亚、泰国印度尼西亚等等，因为工作交流基本上使用英语，所以很开心的发现即使回到国内英语水平也并未退步。"}
         }
     },
-    created () {
-      this.$http.get('/api/introduction.json').then(function(res){
-        var data = res.data
-        console.log(res.data)
-        this.$set(this, 'introduction', res.body)
-      },function(){
-        //alert('请求失败处理');   //失败处理
-      });
-    }
+//    created () {
+//      this.$http.get('/api/introduction.json').then(function(res){
+//        var data = res.data
+//        console.log(res.data)
+//        this.$set(this, 'introduction', res.body)
+//      },function(){
+//        //alert('请求失败处理');   //失败处理
+//      });
+//    }
   }
 </script>
 
