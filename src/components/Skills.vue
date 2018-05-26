@@ -49,7 +49,7 @@
       }
     },
     created () {
-      this.$http.get('/api/skills').then(function(res){
+      this.$http.get('/api/skills.json').then(function(res){
         var data = res.data
         console.log(res.data)
         this.$set(this, 'skills', data)

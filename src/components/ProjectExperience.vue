@@ -24,7 +24,7 @@
       }
     },
     created () {
-      this.$http.get('/api/projectexperience').then(function(res){
+      this.$http.get('/api/projectexperience.json').then(function(res){
         if (!this.projectgallery) this.projectgallery = []
         if (!this.projecturls) this.projecturls = []
         var data = res.data

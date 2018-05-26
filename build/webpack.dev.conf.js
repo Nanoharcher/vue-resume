@@ -60,22 +60,22 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       poll: config.dev.poll,
     },
     before(app){
-      app.get('/api/introduction', (req, res) => {
+      app.get('/api/introduction.json', (req, res) => {
         res.json(introduction)
       })
-      app.get('/api/navigation', (req, res) => {
+      app.get('/api/navigation.json', (req, res) => {
         res.json(navigation)
       })
-      app.get('/api/education', (req, res) => {
+      app.get('/api/education.json', (req, res) => {
         res.json(education)
       })
-      app.get('/api/workexperience', (req, res) => {
+      app.get('/api/workexperience.json', (req, res) => {
         res.json(workexp)
       })
-      app.get('/api/projectexperience', (req, res) => {
+      app.get('/api/projectexperience.json', (req, res) => {
         res.json(projectexp)
       })
-      app.get('/api/skills', (req, res) => {
+      app.get('/api/skills.json', (req, res) => {
         res.json(skills)
       })
     }

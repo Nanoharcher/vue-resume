@@ -56,7 +56,7 @@
       slider
     },
     created () {
-      this.$http.get('/api/workexperience').then(function(res){
+      this.$http.get('/api/workexperience.json').then(function(res){
         if (!this.icons) this.icons = []
         var data = res.data
         console.log(res.data)

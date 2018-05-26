@@ -67,7 +67,7 @@
       }
     },
     created () {
-      this.$http.get('/api/education').then(function(res){
+      this.$http.get('/api/education.json').then(function(res){
         var data = res.data
         this.$set(this, 'education', res.body)
         this.$set(this,'icons', this.education.icon)

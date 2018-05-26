@@ -25,7 +25,7 @@
         }
     },
     created () {
-      this.$http.get('/api/introduction').then(function(res){
+      this.$http.get('/api/introduction.json').then(function(res){
         var data = res.data
         console.log(res.data)
         this.$set(this, 'introduction', res.body)

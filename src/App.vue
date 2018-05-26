@@ -26,7 +26,7 @@
         }
     },
     created () {
-      this.$http.get('/api/navigation').then(function(res){
+      this.$http.get('/api/navigation.json').then(function(res){
         var data = res.data
         console.log(res.data)
         this.$set(this, 'navigation', res.body)
