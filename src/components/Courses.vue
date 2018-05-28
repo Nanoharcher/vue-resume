@@ -30,4 +30,7 @@
   }
 </script>
 <style scoped>
+  .nav{
+    diplay:none!important;
+  }
 </style>

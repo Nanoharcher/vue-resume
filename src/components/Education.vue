@@ -120,7 +120,7 @@
         $.magnificPopup.open({
           items: {
             //src: '<div style="position: relative; background: #FFF; padding: 20px; width: auto; max-width: 500px; margin: 20px auto;" :v-if="false">查看 '+schoolname+' 证书</div>',
-            src:'../Courses/'+schoolID,
+            src:'./#/Courses/'+schoolID,
             type: 'iframe'
           }
         });

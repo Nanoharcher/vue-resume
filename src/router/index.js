@@ -11,10 +11,9 @@ import Skills from '@/components/Skills'
 Vue.use(Router)
 
 export default new Router({
-  mode:'history',
+  mode:'hash',
   routes: [
-    {path:'/',redirect:'/AboutMe',meta:{ navShow: true}},
-    {path: '/', name: 'AboutMe', component: AboutMe,meta:{ navShow: true}},
+    {path: '/', redirect: '/AboutMe', meta:{ navShow: true}},
     {path:'/AboutMe',name:'AboutMe',component: AboutMe ,meta:{ navShow: true}},
     {path:'/Education',name:'Education',component: Education, meta:{ navShow: true}},
     {path:'/Courses/:id',name:'Courses',component: Courses, meta:{ navShow: false}},
