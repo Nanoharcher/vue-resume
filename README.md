@@ -1,6 +1,7 @@
 # vue-resume
 
-> Resume build with vue.js
+> Web responsive resume build with vue.js
+> Live demo: https://nanoharcher.github.io/vue-resume/
 
 ## Build Setup
 
